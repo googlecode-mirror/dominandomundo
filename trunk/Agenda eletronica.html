@@ -1,0 +1,58 @@
+<html>
+<script>
+var texto = " "
+var online = true;
+var client = [["ari","8854-6987","ari@hotmail.com"],["paulo","8854-6988","paulo@hotmail.com"]];
+var marcador = 0;
+client [0][0] = "ari";
+client [0][1] = "8854-6987";
+client [0][2] = "ari@hotmail.com";
+client [1][0] = "paulo";
+client [1][1] = "8854-6988";
+client [1][2] = "paulo@hotmail.com";
+while(online){
+
+var pronto = prompt("Bem-Vindo digite '1' para listar nomes,telefones e emails. digite '2' para editar nomes e etc, digite '3' para buscar, '4' para inserir dados");
+		if(pronto == '1'){  // Travei aqui botei listar todos os nomes para nao ficar igual ao buscar
+		alert(client);
+		
+		}
+	if(pronto == '2'){
+	var client2 = prompt("Deseja alterar qual client?");
+	var n2 = prompt ("Altere numero agora");
+	var mail = prompt ("altere o e-mail ou ative o mesmo");
+	client[client2] = n2 + mail;
+	alert("Novo cadastro de " + client2 + " com numero: " + n2 + " e " + mail + " cadastrado com sucesso");
+	}
+	
+	if(pronto == '3'){
+	var buscar = prompt ("Busque seu cliente especifico");
+		 if (buscar == 'ari'){
+		alert(client[0]);
+	
+		}
+			else {
+			alert(client[1]);
+			}
+	
+	
+	}
+	
+	if(pronto == '4'){
+	var novo = prompt("Insira um novo nome");	
+	var novo2 = prompt("insira um novo telefone");
+	var novo3 = prompt("insira um novo email");
+	marcador ++
+	alert("Novo cliente cadastrado se chama " + novo + " Tel: " + novo2 + " email: " + novo3);
+	
+	}
+
+
+
+
+		online = confirm ("Deseja continuar?");
+}
+
+	
+</script>
+</html>
